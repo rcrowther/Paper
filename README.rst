@@ -9,4 +9,4 @@ Requirements
 --------------
 Quickviews_
 
-.. _Qickviews: https://github.com/rcrowther/quickviews
+.. _Quickviews: https://github.com/rcrowther/quickviews
