@@ -9,4 +9,21 @@ Requirements
 --------------
 Quickviews_
 
+
+Install
+-------
+In settings.py, ::
+
+	INSTALLED_APPS = [
+		...
+		'paper.apps.PaperConfig',
+		]
+
+In (site) url.py, ::
+
+	urlpatterns = [
+		path('paper/', include('paper.urls')),
+		]
+
+
 .. _Quickviews: https://github.com/rcrowther/quickviews
