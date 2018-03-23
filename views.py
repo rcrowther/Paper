@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
 from django import forms
-from quickviews import ModelCreateView, ModelUpdateView, ModelDeleteView, ModelListView, ModelDetailView
-from quickviews import inline_templates
+
+try:
+    from quickviews import ModelCreateView, ModelUpdateView, ModelDeleteView, ModelListView, ModelDetailView
+    from quickviews import inline_templates
+except ImportError:
+    raise ImportError('The Paper.views module requires the Quickviews app.')
 
 from .models import Paper
 

@@ -1,8 +1,5 @@
 from django.conf.urls import url
 
-from quickviews import ModelListView
-from quickviews import ModelDetailView
-
 from .models import Paper
 from . import views
 

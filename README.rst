@@ -9,9 +9,17 @@ Requirements
 --------------
 Quickviews_
 
+Uninstall
+---------
+The wise app is humble, ::
 
+    python manage.py paper_uninstall -h
+    
 Install
 -------
+
+
+
 In settings.py, ::
 
 	INSTALLED_APPS = [
@@ -24,6 +32,13 @@ In (site) url.py, ::
 	urlpatterns = [
 		path('paper/', include('paper.urls')),
 		]
+
+Migrate, ::
+
+    > python manage.py makemigrations
+    > python manage.py migrate
+
+
 
 
 .. _Quickviews: https://github.com/rcrowther/quickviews
