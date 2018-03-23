@@ -14,11 +14,11 @@ Uninstall
 The wise app is humble, ::
 
     python manage.py paper_uninstall -h
+
+
     
 Install
 -------
-
-
 
 In settings.py, ::
 

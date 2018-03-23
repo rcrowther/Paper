@@ -17,7 +17,7 @@ class Command(BaseCommand):
             c.close()
             
     def handle(self, *args, **options):
-        #self.drop(Paper._meta.db_table) 
+        self.drop(Paper._meta.db_table) 
         self.stdout.write(self.style.SUCCESS('Uninstalled the paper app database tables'))
         self.stdout.write('You may need also to:')
         self.stdout.write(' - remove app registration in settings.py')
