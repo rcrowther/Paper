@@ -30,7 +30,8 @@ In settings.py, ::
 In (site) url.py, ::
 
 	urlpatterns = [
-		path('paper/', include('paper.urls')),
+    ...
+    url(r'^paper/', include('paper.urls')),
 		]
 
 Migrate, ::
@@ -38,7 +39,9 @@ Migrate, ::
     > python manage.py makemigrations
     > python manage.py migrate
 
+or, if this a demo and you need a working table, ::
 
+    > python manage.py migrate --run-syncdb
 
 
 .. _Quickviews: https://github.com/rcrowther/quickviews
