@@ -36,12 +36,12 @@ In (site) url.py, ::
 
 Migrate, ::
 
-    > python manage.py makemigrations
-    > python manage.py migrate
+    $ python manage.py makemigrations
+    $ python manage.py migrate
 
 or, if this a demo, and you need a working table, and don't care about replication or construction security, ::
 
-    > python manage.py migrate --run-syncdb
+    $ python manage.py migrate --run-syncdb
 
 
 The Model
@@ -80,16 +80,16 @@ The app also has a set of views which will appear if the quickviews app is insta
     http://127.0.0.1:8000/paper/qv/23/
     http://127.0.0.1:8000/paper/qv
     
-after you are done with Paper, it can be easily uninstalled, see above.
+After you are done with Paper, it can be easily uninstalled, see above.
 
 
 Thoughts
 --------
-Django documentation does not describe anywhere how to enable Model-based CUD forms. No, I don't care what you say, it does not. So this module may be of help for that.  
+Django documentation does not describe anywhere how to enable Model-based CUD forms. No, I don't care what you say, it does not. So the code in this app may be of help.  
 
 If you don't do Django all the time, Quickviews is a raft for crossing the pain of Django forms. And everyone needs forms. Go compare.
 
-This is the base of a classic CNS. I'm laughing, if you are not.
+This is the base of a classic CMS. I'm laughing, if you are not.
 
  
 .. _Quickviews: https://github.com/rcrowther/quickviews
