@@ -1,0 +1,23 @@
+{% extends "paper/base.html" %}
+{% load i18n static tml %}
+
+{% block html_title %} {{ title|striptags }} {% endblock %}
+
+{% block head_tags %}
+{% endblock %}
+
+{% block title %}
+  {{ object.title }}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div>{{ object.body|uml_tml }}</div>
+    <date>{{ object.mod_date }}</date>
+    <author>{{ object.author }}</author>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

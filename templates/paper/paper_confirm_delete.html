@@ -1,0 +1,14 @@
+{% extends "paper/base.html" %}
+
+{% block html_title %} Paper Delete {% endblock %}
+
+{% block title %}
+  Paper delete "{{ paper.title }}"
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="">
+    {% csrf_token %}
+    <input type="submit" value="Delete" />
+    </form>
+{% endblock %}

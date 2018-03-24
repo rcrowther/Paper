@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block html_title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block head_tags %}{% endblock %}
+    {{ media }}
+  </head>
+
+  <body>
+    <section>
+      <!-- site header -->
+      <header>
+        <div class="mast">
+          <div class="logo">
+          Paper Demo
+          </div>
+        </div>
+      </header>
+
+      <article>
+        <header>
+        <h3>{% block title %}No title{% endblock %}</h3>
+        {% block header %}{% endblock %}
+        </header>
+        
+        {% block content %}{% endblock %}
+        
+        <footer>
+        {% block footer %}{% endblock %}
+        </footer>
+      </article>
+  
+      {% if aside %}    
+      <aside>
+        {{ aside }}
+      </aside>
+      {% endif %}
+
+    </section>
+  </body>
+</html>

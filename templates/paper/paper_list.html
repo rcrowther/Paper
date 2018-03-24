@@ -1,0 +1,20 @@
+{% extends "paper/base.html" %}
+
+{% block html_title %} Papers {% endblock %}
+
+{% block title %}
+  Papers
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Create Date</th>
+        </tr>
+        {% for paper in object_list %}
+            <tr><td class="title">{{ paper.title }}</td><td class="author">{{ paper.author }}</td><td class="date">{{ paper.date }}</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

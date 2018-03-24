@@ -1,0 +1,15 @@
+{% extends "paper/base.html" %}
+
+{% block html_title %} Paper form {% endblock %}
+
+{% block title %}
+  Paper form
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Modify" />
+    </form>
+{% endblock %}

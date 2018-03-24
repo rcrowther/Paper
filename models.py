@@ -1,10 +1,11 @@
 from django.db import models
 import datetime
+from django.urls import reverse
 
-# Create your models here.
 
 
 class PaperManager(models.Manager):
+  
     def create(self, obj):
         '''
         Create.
@@ -79,14 +80,9 @@ class Paper(models.Model):
     objects = models.Manager()
     system = PaperManager()
     
-    #def get_absolute_url(self):
-    #return "/people/%i/" % self.id
+    def get_absolute_url(self):
+        return reverse('paper-detail', args=[str(self.id)])
     
-    #def get_absolute_url(self):
-    #from django.urls import reverse
-    #return reverse('people.views.details', args=[str(self.id)])
     def __str__(self):
-      return "{0}".format(
-      self.title
-      )
+        return "{0}".format(self.title)
   
