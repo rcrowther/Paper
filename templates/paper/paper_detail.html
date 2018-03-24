@@ -1,5 +1,5 @@
 {% extends "paper/base.html" %}
-{% load i18n static tml %}
+{% load i18n static %}
 
 {% block html_title %} {{ title|striptags }} {% endblock %}
 
@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-    <div>{{ object.body|uml_tml }}</div>
+    <div>{{ object.body }}</div>
     <date>{{ object.mod_date }}</date>
     <author>{{ object.author }}</author>
 {% endblock %}
