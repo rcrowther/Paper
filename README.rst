@@ -44,6 +44,14 @@ or, if this a demo, and you need a working table, and don't care about replicati
     $ python manage.py migrate --run-syncdb
 
 
+Loading data
+++++++++++++
+Some data is available to populate the db table, ::
+
+    python manage.py paper_load DutchPainters
+
+
+
 The Model
 ---------
 Is vaugely based in Drupal's 'node'. Before Drupal, to use Guido van Rossum's word, 'hyper-abstracted'. It's a body text with a title, summary, dates, and author fields.
