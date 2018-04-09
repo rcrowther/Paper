@@ -34,14 +34,25 @@ In (site) url.py, ::
     url(r'^paper/', include('paper.urls')),
 		]
 
-Migrate, ::
 
-    $ python manage.py makemigrations
-    $ python manage.py migrate
+Migrate
+-------
+I admit: I have not fully worked out a migrate stategy. Django migrations are made, it seems, mainly to prevent a devastating table drop. But this app would prefer to raise and drop tables on order ('south' users: I'm sticking to Django core. Hope you know what to do?).
 
-or, if this a demo, and you need a working table, and don't care about replication or construction security, ::
+For the given purpose, I suggest ignoring migrations, ::
 
     $ python manage.py migrate --run-syncdb
+
+Uninstall is documented above.
+
+
+If you want to use migrations, a raise and a drop are '.bck' commented in the migrations folder. Uncomment and do something like, ::
+
+    $ python manage.py makemigrations
+    $ python manage.py migrate paper 0001_initial 
+
+But bear in mind you will run into problems (rightly) if you want to repeatedly install/uninstall.
+
 
 
 Loading data
@@ -50,6 +61,7 @@ Some data is available to populate the db table, ::
 
     python manage.py paper_load DutchPainters
 
+This command will also sync the database, if not yet done.
 
 
 The Model
